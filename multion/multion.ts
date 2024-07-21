@@ -9,7 +9,7 @@ interface SearchParams {
 }
 
 export async function GET(request: NextRequest) {
-  console.log('Request URL:', request.url);
+  // console.log('Request URL:', request.url);
   try {
     const { searchParams } = new URL(request.url);
     const cmd = searchParams.get('cmd') || 'Tell me something signifcant and interesting about todays date, in a fun way.';
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     const sshot = searchParams.get('sshot') !== null ? true : false;
     const proxy = searchParams.get('proxy') != null ? true : false;
 
-    console.log('CMD:', cmd, 'URL:', url);
+   // console.log('CMD:', cmd, 'URL:', url);
 
     try {
       new URL(url);
