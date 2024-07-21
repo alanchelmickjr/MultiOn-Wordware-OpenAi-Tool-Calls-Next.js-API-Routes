@@ -1,5 +1,5 @@
 # multion-wordware-agentops-hackathon
-Here is the code I built since Friday evening, I am a Python programmer and Javascript so Typescript is new to me but I am making the curve.  You will not find agentops code here or mem0 as they were already integrated into my backend and thus are just calls and I
+Here is the hackathon code I've created since this Friday evening, I am a Python programmer and Javascript so Typescript is new to me but I am making the curve.  You will not find agentops code here or mem0 as they were already integrated into my backend and thus are just calls and I
 did not have time to rewrite hackathon copies as I did for multion, wordware
 
 Using Vercel and Next.js for the 1st time :D, coming from a stateful environ I've screamed a few times. 
