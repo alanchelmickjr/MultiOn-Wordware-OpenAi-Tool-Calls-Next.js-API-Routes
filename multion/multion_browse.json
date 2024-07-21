@@ -1,0 +1,87 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Web Surfing Tool",
+    "description": "This tool allows you to surf the internet and retrieve data based on a specific command and URL. You can use it to extract information from web pages by specifying what you want to find and the URL of the page.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://myriadai.online/api/chat/tools/multion"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Execute a command on a specific URL to retrieve information",
+        "operationId": "SurfWeb",
+        "parameters": [
+          {
+            "name": "cmd",
+            "in": "query",
+            "description": "The command to execute, describing what information to retrieve from the URL. For example: 'cmd: Find the top comment of the top post on Hackernews.' add 'cmd:' to the beginning if it does not exist.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "summarize"
+          },
+          {
+            "name": "url",
+            "in": "query",
+            "description": "The URL of the web page to execute the command on. example: 'url: https://www.myriadai.online ' add the 'url:' to the beginning and 'https://' if they are missing.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "https://www.albanyumc.org"
+          },
+          {
+            "name": "sshot",
+            "in": "query",
+            "description": "A boolean flag to determine if a screenshot should be taken. Defaults to false if not provided.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "example": false
+          },
+          {
+            "name": "proxy",
+            "in": "query",
+            "description": "A boolean flag to determine if a proxy should be used. Defaults to false if not provided.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "example": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with the retrieved information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string",
+                      "description": "The information retrieved from the web page based on the command."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, likely due to missing or invalid parameters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
