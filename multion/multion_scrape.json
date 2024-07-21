@@ -14,12 +14,12 @@
     "/": {
       "get": {
         "description": "Execute a command on a specific URL to retrieve information",
-        "operationId": "SurfWeb",
+        "operationId": "ScrapeWeb",
         "parameters": [
           {
             "name": "cmd",
             "in": "query",
-            "description": "The command to execute, describing what information to retrieve from the URL. For example: 'cmd: Find the top comment of the top post on Hackernews.' add 'cmd:' to the beginning if it does not exist.",
+            "description": "The command to execute, describing what information to retrieve from the URL as strings in an array called fields.  structure as json url, cmd, proxy, sshot, fields and break down in steps needed to derive data as defined by the extracted cmd.",
             "required": true,
             "schema": {
               "type": "string"
