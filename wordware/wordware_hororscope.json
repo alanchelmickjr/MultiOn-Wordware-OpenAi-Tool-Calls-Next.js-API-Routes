@@ -1,0 +1,84 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "WordApp Horoscope Question Answering Tool",
+    "description": "A text generation tool that provides horoscope data.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://app.wordware.ai/api/released-app/8f6797bc-4694-425e-85cb-b0209c6446bb"
+    }
+  ],
+  "paths": {
+    "/run": {
+      "post": {
+        "description": "Send data to the WordApp API and receive a response.",
+        "operationId": "SendData",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputs": {
+                    "type": "object",
+                    "properties": {
+                      "tweets": {
+                        "type": "string",
+                        "description": "The tweets data as longtext",
+                        "example": "<longtext_value>"
+                      },
+                      "profilePicture": {
+                        "type": "string",
+                        "description": "The URL or base64 encoded data of the profile picture",
+                        "example": "<image_value>"
+                      },
+                      "profileInfo": {
+                        "type": "string",
+                        "description": "The profile information as text",
+                        "example": "<text_value>"
+                      }
+                    },
+                    "required": ["tweets", "profilePicture", "profileInfo"]
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "The version number you want to use. Use the caret syntax to get the latest non-breaking version.",
+                    "example": "^1.0"
+                  }
+                },
+                "required": ["inputs", "version"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response with the processed data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "type": "string",
+                      "description": "The processed data response"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, likely due to missing or invalid parameters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
