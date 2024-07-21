@@ -1,5 +1,5 @@
 # multion-wordware-agentops-hackathon
-Here is the code I built since Friday evening.  You will not find agentops or mem0 as they were already integrated into my backend and thus are just calls and I
+Here is the code I built since Friday evening, I am a Python programmer and Javascript so Typescript is new to me but I am making the curve.  You will not find agentops code here or mem0 as they were already integrated into my backend and thus are just calls and I
 did not have time to rewrite hackathon copies as I did for multion, wordware
 
 You can use the LIVE version here --> https://myriadai.online  but the free version is limited, didn't make you a copy yet. :D
