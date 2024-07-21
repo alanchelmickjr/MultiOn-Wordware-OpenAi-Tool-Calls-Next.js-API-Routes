@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 interface Session {
   sessionId: string;
+  cmd: string;
   data: any; // or a more specific type if you know what kind of data is stored
   url: string;
   sshot: boolean;
