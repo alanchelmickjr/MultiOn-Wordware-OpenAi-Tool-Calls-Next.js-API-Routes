@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "WordApp Question Answering Tool",
-    "description": "This tool allows you to ask thought-provoking questions and get answers using the WordApp API. Please note that the output should be the text contained in the 'content' field of the JSON response.",
+    "description": "This tool allows you to ask thought-provoking questions and get answers using the WordApp API.",
     "version": "v1.0.0"
   },
   "servers": [
