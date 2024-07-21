@@ -6,6 +6,9 @@ interface Session {
   sessionId: string;
   data: any; // or a more specific type if you know what kind of data is stored
   url: string;
+  sshot: boolean;
+  proxy: boolean;
+  fields: string[];
 }
 
 let sessions: { [key: string]: Session } = {}; // Initialize the sessions object with an empty object
