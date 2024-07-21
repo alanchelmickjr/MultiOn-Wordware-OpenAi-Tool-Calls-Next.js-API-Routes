@@ -62,9 +62,12 @@
             "description": "An array of fields to extract",
             "required": false,
             "schema": {
-              "type": ["string"]
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
-            "example": false
+            "example": ["field1", "field2", "field3"]
           }
         ],
         "responses": {
