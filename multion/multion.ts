@@ -5,6 +5,7 @@ interface SearchParams {
   cmd: string;
   url: string;
   sshot: boolean;
+  proxy: boolean;
 }
 
 export async function GET(request: NextRequest) {
