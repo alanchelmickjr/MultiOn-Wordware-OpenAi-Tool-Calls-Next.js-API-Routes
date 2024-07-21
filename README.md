@@ -7,6 +7,7 @@ Using Vercel and Next.js for the 1st time :D, coming from a stateful environ I'v
 <ul>/app/api/chat/tools/route.js  is a generic tool handler and you should add stepping and better session handling
   
 /wordware/ are the tool calls needed to reach out to any api you launch on Wordware
+
 /multion/ are the routes and tool calls needed to use Multion Scrape and Browse</ul>
 
 
