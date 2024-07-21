@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 interface Session {
   sessionId: string;
   data: any; // or a more specific type if you know what kind of data is stored
-  scrapeUrl: string;
+  url: string;
 }
 
 let sessions: { [key: string]: Session } = {}; // Initialize the sessions object with an empty object
@@ -35,7 +35,7 @@ const handleRequest = async (request: NextRequest) => {
       const { cmd, fields } = await request.json();
       if (cmd) {
         const createResponse = await multion.sessions.create({
-          url: scrapeURL,
+          url: url,
           useProxy: true,
         });
         session.sessionId = createResponse.sessionId;
