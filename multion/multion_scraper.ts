@@ -9,7 +9,7 @@ interface Session {
 
 let sessions: { [key: string]: Session } = {}; // Initialize the sessions object with an empty object
 
-const multion = new MultiOnClient({ apiKey: 'YOUR_API_KEY' }); // Replace with your API key
+const multion = new MultiOnClient({ apiKey: env.MULTION_API_KEY }); // Replace with your API key
 
 const handleRequest = async (request: NextRequest) => {
   const sessionId = request.headers.get('x-session-id')?.[0] ?? '';
@@ -34,7 +34,7 @@ const handleRequest = async (request: NextRequest) => {
       const { cmd, fields } = await request.json();
       if (cmd) {
         const createResponse = await multion.sessions.create({
-          url: 'https://news.ycombinator.com/',
+          url: scrapeURL,
           useProxy: true,
         });
         session.sessionId = createResponse.sessionId;
