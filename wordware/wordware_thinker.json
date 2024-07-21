@@ -13,7 +13,7 @@
   "paths": {
     "/run": {
       "post": {
-        "description": "Send a thought-provoking question to the WordApp API and receive an answer. Return only the text inside the 'content' field of the response.",
+        "description": "Send a thought-provoking question to the WordApp API and receive an answer.",
         "operationId": "AskQuestion",
         "requestBody": {
           "required": true,
