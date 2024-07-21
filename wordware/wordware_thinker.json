@@ -1,0 +1,74 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "WordApp Question Answering Tool",
+    "description": "This tool allows you to ask thought-provoking questions and get answers using the WordApp API. Please note that the output should be the text contained in the 'content' field of the JSON response.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://app.wordware.ai/api/released-app/70ea77ac-c336-4dd3-aa6e-c6bc1691a4cc"
+    }
+  ],
+  "paths": {
+    "/run": {
+      "post": {
+        "description": "Send a thought-provoking question to the WordApp API and receive an answer. Return only the text inside the 'content' field of the response.",
+        "operationId": "AskQuestion",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputs": {
+                    "type": "object",
+                    "properties": {
+                      "Type a Thought Provoking Question that uses internet search": {
+                        "type": "string",
+                        "description": "The thought-provoking question you want to ask, which uses internet search.",
+                        "example": "What are the implications of quantum computing on encryption?"
+                      }
+                    },
+                    "required": ["Type a Thought Provoking Question that uses internet search"]
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "The version number you want to use. Use the caret syntax to get the latest non-breaking version.",
+                    "example": "^1.0"
+                  }
+                },
+                "required": ["inputs", "version"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response with the answer to the thought-provoking question",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "type": "string",
+                      "description": "The answer to the thought-provoking question"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, likely due to missing or invalid parameters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
