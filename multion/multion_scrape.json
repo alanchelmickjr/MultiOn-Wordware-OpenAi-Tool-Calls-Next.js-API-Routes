@@ -55,6 +55,16 @@
               "type": "boolean"
             },
             "example": false
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "An array of fields to extract",
+            "required": false,
+            "schema": {
+              "type": ["string"]
+            },
+            "example": false
           }
         ],
         "responses": {
