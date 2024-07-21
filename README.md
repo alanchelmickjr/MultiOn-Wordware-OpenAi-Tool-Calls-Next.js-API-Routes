@@ -1,5 +1,5 @@
-# multion-wordware-agentops-hackathon  here is all the code I built in the last 2 days.
-You will not find agentops or mem0 as they were already integrated into my backend and thus are just calls and I
+# multion-wordware-agentops-hackathon
+Here is the code I built since Friday evening.  You will not find agentops or mem0 as they were already integrated into my backend and thus are just calls and I
 did not have time to rewrite hackathon copies as I did for multion, wordware
 
 Tool configurations and code to deploy Multion Browse and Scrape, all 4 Wordware Templates &amp;
