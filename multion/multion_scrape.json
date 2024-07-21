@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://myriadai.online/api/chat/tools/multion"
+      "url": "https://myriadai.online/api/chat/tools/multion_scrape"
     }
   ],
   "paths": {
