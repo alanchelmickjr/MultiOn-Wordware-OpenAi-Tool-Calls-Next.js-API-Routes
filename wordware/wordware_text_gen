@@ -1,0 +1,79 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "WordApp API Tool",
+    "description": "This API tool allows you to submit inputs for processing by the WordApp API.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://app.wordware.ai/api/released-app/758430fe-f0b1-47ef-b92c-41348e8184bf"
+    }
+  ],
+  "paths": {
+    "/run": {
+      "post": {
+        "description": "Submit inputs 'R' and 'JD' to the WordApp API and receive a processed response.",
+        "operationId": "ProcessInputs",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputs": {
+                    "type": "object",
+                    "properties": {
+                      "R": {
+                        "type": "string",
+                        "description": "Input R, a longtext value.",
+                        "example": "<longtext_value_for_R>"
+                      },
+                      "JD": {
+                        "type": "string",
+                        "description": "Input JD, another longtext value.",
+                        "example": "<longtext_value_for_JD>"
+                      }
+                    },
+                    "required": ["R", "JD"]
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "The version number you want to use. Use the caret syntax to get the latest non-breaking version.",
+                    "example": "^1.0"
+                  }
+                },
+                "required": ["inputs", "version"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response with the processed content based on inputs 'R' and 'JD'",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "type": "string",
+                      "description": "The processed content based on inputs 'R' and 'JD'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, likely due to missing or invalid parameters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
