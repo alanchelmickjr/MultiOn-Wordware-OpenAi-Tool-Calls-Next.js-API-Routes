@@ -1,0 +1,74 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "WordApp Coding Question Answering Tool",
+    "description": "This tool allows you to ask coding questions and get answers using the WordApp API.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://app.wordware.ai/api/released-app/4d45115c-f53c-45e3-bc5f-f59ec67a4f1d"
+    }
+  ],
+  "paths": {
+    "/run": {
+      "post": {
+        "description": "Send a coding question to the Wordware API and receive an answer.",
+        "operationId": "AskQuestion",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputs": {
+                    "type": "object",
+                    "properties": {
+                      "question": {
+                        "type": "string",
+                        "description": "The question you want to ask",
+                        "example": "What are the basic javascript data types?"
+                      }
+                    },
+                    "required": ["question"]
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "The version number you want to use. Use the caret syntax to get the latest non-breaking version.",
+                    "example": "^1.0"
+                  }
+                },
+                "required": ["inputs", "version"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response with the answer to the question",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "answer": {
+                      "type": "string",
+                      "description": "The answer to the question"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, likely due to missing or invalid parameters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
