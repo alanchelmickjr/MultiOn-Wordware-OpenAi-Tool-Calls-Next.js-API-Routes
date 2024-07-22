@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
 
 
     const sessionId = browseResponse.sessionId;
-    console.log('Browse Response:', browseResponse);
+    // console.log('Browse Response:', browseResponse);
     // IF NOT DONE then session can continue TODO:
     await multion.sessions.close(sessionId);
     return NextResponse.json(browseResponse);
