@@ -1,24 +1,21 @@
-# multion-wordware-agentops-hackathon
-Here is the hackathon code I've created since this Friday evening, I am a Python programmer and Javascript so Typescript is new to me but I am making the curve.  You will not find agentops code here or mem0 as they were already integrated into my backend and thus are just calls and I
-did not have time to rewrite hackathon copies as I did for multion, wordware
+# MultiOn & Wordware Tool integration
 
-Using Vercel and Next.js for the 1st time :D, coming from a stateful environ I've screamed a few times. 
+Tech Stack:  Using Vercel and Next.js in the new /app scheme with Typescript routes.
 
-<ul>/app/api/chat/tools/route.ts  is a generic tool handler and you should add stepping and better session handling
-  
+
+*** Tool call examples to use with ERAC to call api endpoints that answer questions like Wordware ***
+
 /wordware/ are the tool calls needed to reach out to any api you launch on Wordware
+
+
+*** MultiOn is built in to ERAC and here are the tool calls and the route.ts files for each api endpoint ***
 
 /multion/ are the routes and tool calls needed to use Multion Scrape and Browse</ul>
 
 
-You can use the LIVE version here --> https://myriadai.online  but the free version is limited, didn't make you a copy yet. :D
+You can use the LIVE Free version here --> https://myriadai.online  but the free version is limited, PRO coming soon.
 
-3 minutes or less demo here --> https://youtu.be/HcjcZD3a-Z8
-
-Tool configurations and code to deploy Multion Browse and Scrape, all 4 Wordware Templates &amp;
-Utlizing Claude, Groq & mem0 AgentOps <- integrated these tools PRE hackathon so, no credit for hackthon coding :D
-
-p.s. I am in school full time and could use a role 20 hrs/week. 🏫 mailto:email@alanhelmick.com
+Tool configurations and code to deploy Multion Browse and Scrape, all 4 Wordware Templates Demo
 
 Introducing the Universal AI Playground - the ultimate platform for harnessing the power of artificial intelligence to tackle real-world challenges. This innovative tool empowers users to create interoperable chains of intelligent agents and specialized tools, unlocking unprecedented capabilities. Imagine seamlessly integrating natural language processing, computer vision, robotic control, and predictive analytics to automate complex workflows or devise novel solutions. The Universal AI Playground provides a flexible, modular environment where you can mix and match AI components, experiment with new configurations, and watch as your ideas come to life. Whether you're a seasoned developer, a domain expert, or a curious tinkerer, this playground puts the future of AI in your hands. Unlock new possibilities and revolutionize the way you approach problem-solving today.
 
