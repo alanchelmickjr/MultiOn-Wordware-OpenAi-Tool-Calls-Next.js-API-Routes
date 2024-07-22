@@ -3,14 +3,14 @@
 Tech Stack:  Using Vercel and Next.js in the new /app scheme with Typescript routes.
 
 
-*** Tool call examples to use with ERAC to call api endpoints that answer questions like Wordware ***
-
-/wordware/ are the tool calls needed to reach out to any api you launch on Wordware
-
-
-*** MultiOn is built in to ERAC and here are the tool calls and the route.ts files for each api endpoint ***
-
-/multion/ are the routes and tool calls needed to use Multion Scrape and Browse</ul>
+  *** Tool call examples to use with ERAC to call api endpoints that answer questions like Wordware ***
+  
+  /wordware/ are the tool calls needed to reach out to any api you launch on Wordware
+  
+  
+  *** MultiOn is built in to ERAC and here are the tool calls and the route.ts files for each api endpoint ***
+  
+  /multion/ are the routes and tool calls needed to use Multion Scrape and Browse</ul>
 
 
 You can use the LIVE Free version here --> https://myriadai.online  but the free version is limited, PRO coming soon.
