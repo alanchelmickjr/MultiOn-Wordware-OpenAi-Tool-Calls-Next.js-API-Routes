@@ -1,4 +1,4 @@
-# MultiOn & Wordware Tool integration
+# MultiOn & Wordware Tool integration for Next.js & OpenAI
 
 Tech Stack:  Using Vercel and Next.js in the new /app scheme with Typescript routes.
 
