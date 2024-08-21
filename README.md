@@ -9,9 +9,9 @@ Welcome to the **Universal AI Playground** - the ultimate platform for harnessin
 
 ## Tool Call Examples
 
-### Wordware Integration
+### MultiOn Integration
 
-**Tool call examples to use with ERAC to call API endpoints that answer questions like Wordware**
+**Tool call examples to use with ERAC to call API endpoints that answer questions or retrieve websites**
 
 
 #### /multion/ Tool Call for Browse
